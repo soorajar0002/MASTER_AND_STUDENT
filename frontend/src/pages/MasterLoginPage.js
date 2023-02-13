@@ -1,8 +1,10 @@
 import React from 'react'
-
+import MasterLogin from '../components/master/MasterLogin'
 const MasterLoginPage = () => {
   return (
-    <div>MasterLoginPage</div>
+    <div>
+      <MasterLogin/>
+    </div>
   )
 }
 

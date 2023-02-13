@@ -1,8 +1,10 @@
 import React from 'react'
-
+import StudentSignUp from '../components/student/StudentSignUp'
 const StudentSignUpPage = () => {
   return (
-    <div>StudentSignUpPage</div>
+    <div>
+      <StudentSignUp/>
+    </div>
   )
 }
 

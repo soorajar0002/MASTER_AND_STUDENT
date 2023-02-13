@@ -1,8 +1,10 @@
 import React from 'react'
-
+import MasterSignUp from '../components/master/MasterSignUp'
 const MasterSignUpPage = () => {
   return (
-    <div>MasterSignUpPage</div>
+    <div>
+      <MasterSignUp/>
+    </div>
   )
 }
 

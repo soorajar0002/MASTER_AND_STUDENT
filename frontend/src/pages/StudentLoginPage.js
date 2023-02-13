@@ -1,8 +1,10 @@
 import React from 'react'
-
+import StudentLogin from '../components/student/StudentLogin'
 const StudentLoginPage = () => {
   return (
-    <div>StudentLoginPage</div>
+    <div>
+      <StudentLogin/>
+    </div>
   )
 }
 
