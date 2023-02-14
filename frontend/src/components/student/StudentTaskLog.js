@@ -32,7 +32,7 @@ const StudentTaskLog = () => {
         >
           BACK
         </button></Link>
-        <h1 className="text-xl font-bold mb-4">TASK LOG</h1>
+        <h1 className="text-xl font-bold mb-4">ACTIVITY LOG</h1>
         <div class="relative overflow-x-auto">
           <table class="w-full text-sm text-center text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-200">

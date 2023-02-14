@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <div>
-       <div className="flex justify-center mt-6">
+       <div className="flex justify-center mt-64">
         <Link to="/master/task_log">
          <button
           type="button"
           
-          className="focus:outline-none  bg-yellow-500 text-white  font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 "
+          className="focus:outline-none  bg-black text-white  font-medium rounded-lg text-xl px-16 py-8 mr-2 mb-2 "
         >
           TASK LOG
         </button></Link>
@@ -16,7 +16,7 @@ const Home = () => {
        <button
           type="button"
          
-          className="focus:outline-none  bg-red-500 text-white  font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 "
+          className="focus:outline-none  bg-gray-500 text-white  font-medium rounded-lg text-xl px-16 py-8 mr-2 mb-2 "
         >
           ADD TASK
         </button></Link>

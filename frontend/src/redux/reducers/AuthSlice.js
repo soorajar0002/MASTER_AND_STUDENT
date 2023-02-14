@@ -17,9 +17,11 @@ export const AuthSlice = createSlice({
       },
       removeToken: (state) => {
         // Remove the token from the state
+        console.log("Removing token and user data...");
         return {
           ...state,
           token: null,
+          user: null,
         };
       },
    

@@ -25,7 +25,7 @@ const StudentLogin = () => {
        
       }
     } catch (e) {
-      alert(e)
+      alert("Wrong email or password entered")
     }
   }
   return (

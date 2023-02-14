@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import useAxios from "../../axios/useAxios"
 import { useNavigate } from "react-router-dom"
-
+import { Link } from 'react-router-dom';
 
 const MasterAddTask = () => {
 
@@ -41,8 +41,22 @@ const MasterAddTask = () => {
       
   return (
     <div>
+     <div className="flex justify-center mt-10">
+     <Link to="/master/home">
+         <button
+          type="button"
+          
+          className="focus:outline-none teaxt-center bg-black text-white  font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 "
+        >
+          BACK
+        </button></Link>
+     </div>
+      
       <div className="grid grid-cols-6 gap-4">
-        <div className="col-start-2 col-span-4 text-center border bg-gray-200 p-8 shadow-xl mt-20 rounded-lg">
+      
+        
+        <div className="col-start-2 col-span-4 text-center border bg-gray-200 p-8 shadow-xl mt-10 rounded-lg">
+          
           <h1 className="text-2xl font-extrabold ">ADD TASK</h1>
           <div className="flex justify-between">
         <div className="relative w-full lg:max-w-sm ml-28 mt-10">

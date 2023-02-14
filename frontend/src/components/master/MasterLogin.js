@@ -25,7 +25,7 @@ const MasterLogin = () => {
        
       }
     } catch (e) {
-      alert(e)
+      alert("Wrong email and password entered")
     }
   }
   return (

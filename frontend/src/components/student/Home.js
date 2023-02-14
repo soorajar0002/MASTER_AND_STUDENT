@@ -10,6 +10,7 @@ const Home = () => {
   const [logs, setLogs] = useState([])
   const [input_one, setInputOne] = useState("")
   const [input_two, setInputTwo] = useState("")
+  const [count, setCount] = useState(0)
 
   const api = useAxios()
   const navigate = useNavigate()
@@ -23,7 +24,11 @@ const Home = () => {
       console.log(err)
     }
   }
-
+  const Cal = () => {
+    const filteredLogs = logs.filter((log) => log.result == null);
+    const count = filteredLogs.length;
+    setCount(count)
+  }
   const submit = async (id) => {
     try {
       const response = await api.post(`/calculate/`, {
@@ -44,6 +49,7 @@ const Home = () => {
 
   useEffect(() => {
     data()
+    Cal()
   }, [])
 
 
@@ -55,13 +61,13 @@ const Home = () => {
             type="button"
             className="focus:outline-none  bg-black text-white  font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2 "
           >
-            TASK LOG
+           ACTIVITY LOG
           </button>
         </Link>
       </div>
       <div className="mx-28">
-        <h1 className="text-xl font-bold mb-4">TASK PENDING</h1>
-        <div class="relative overflow-x-auto">
+        <h1 className="text-2xl font-bold mb-4">TASK PENDING</h1>
+        {count===0?<h1 className="text-center font-semibold">NO PENDING TASK</h1>:<div class="relative overflow-x-auto">
           <table class="w-full text-sm text-center text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-200">
               <tr>
@@ -120,7 +126,8 @@ const Home = () => {
               ))}
             </tbody>
           </table>
-        </div>
+        </div>}
+        
       </div>
     </div>
   )
