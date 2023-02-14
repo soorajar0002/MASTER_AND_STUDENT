@@ -6,7 +6,7 @@
 2. Navigate to the frontend directory:
   cd MASTER_AND_STUDENT/frontend/
 3. Install the required packages:
-  npm install
+  npm install and npm start
 4. In a new terminal window, navigate to the backend directory:
   cd MASTER_AND_STUDENT/master_and_student/
 5. Create a virtual environment and activate it:
