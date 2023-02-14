@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import MasterRoute from './route/MasterRoute';
 import StudentRoute from './route/StudentRoute';
 import HomePage from "./pages/HomePage";
@@ -15,7 +15,7 @@ import StudentTaskLogPage from './pages/StudentTaskLogPage';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           
           <Route path="/" element={<HomePage /> }/>
@@ -37,7 +37,7 @@ function App() {
           </Route>
 
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
      
     </div>
   );
