@@ -3,8 +3,8 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .serializers import RegistrationSerializer, UserSerializerWithToken
-
+from .serializers import RegistrationSerializer, StudentSerializer, UserSerializerWithToken
+from .models import Account
 
 #Login
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
@@ -33,3 +33,9 @@ class RegisterView(APIView):
 
                 return Response(data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+class StudentsView(APIView):
+    def get(self,request):
+        students = Account.objects.filter(is_student=True)
+        serializer = StudentSerializer(students,many=True)
+        return Response(serializer.data)

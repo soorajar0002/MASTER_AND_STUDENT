@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const userSlice = createSlice({
+export const AuthSlice = createSlice({
   name: 'token',
   initialState: [],
   reducers: {
@@ -10,7 +10,7 @@ export const userSlice = createSlice({
             access_token:action.payload.access,
             refresh_token:action.payload.refresh,
         };
-        console.log("store",token)
+        
       
         // return a new data
         return {...state, token};
@@ -51,7 +51,7 @@ export const userSlice = createSlice({
       
       isMaster: true,
     };
-    console.log("master",user)
+   
 
     return {
       ...state,user,
@@ -62,7 +62,7 @@ export const userSlice = createSlice({
 });
 
 // this is for dispatch
-export const { setToken,studentData,masterData,removeToken } = userSlice.actions;
+export const { setToken,studentData,masterData,removeToken } = AuthSlice.actions;
 
 // this is for configureStore
-export default userSlice.reducer;
+export default AuthSlice.reducer;

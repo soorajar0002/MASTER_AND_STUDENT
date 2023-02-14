@@ -8,11 +8,16 @@ import StudentLoginPage from "./pages/StudentLoginPage";
 import StudentSignUpPage from "./pages/StudentSignUpPage";
 import MasterHomePage from "./pages/MasterHomePage";
 import StudentHomePage from "./pages/StudentHomePage";
+import MasterAddTaskPage from './pages/MasterAddTaskPage';
+import MasterTaskLogPage from './pages/MasterTaskLogPage';
+import StudentTaskLogPage from './pages/StudentTaskLogPage';
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
+          
           <Route path="/" element={<HomePage /> }/>
           <Route path="/master/login" element={<MasterLoginPage/> }/>
           <Route path="/master/signup" element={<MasterSignUpPage /> }/>
@@ -22,10 +27,13 @@ function App() {
         
           <Route  element={<MasterRoute/>}>
             <Route path="/master/home" element={<MasterHomePage /> }/>
+            <Route path="/master/add_task" element={<MasterAddTaskPage/> }/>
+            <Route path="/master/task_log" element={<MasterTaskLogPage/> }/>
           </Route>
 
           <Route  element={<StudentRoute/>}>
             <Route path="/student/home" element={<StudentHomePage /> }/>
+            <Route path="/student/task_log" element={<StudentTaskLogPage/> }/>
           </Route>
 
         </Routes>
