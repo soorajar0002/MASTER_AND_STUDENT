@@ -60,7 +60,7 @@ const MasterTaskLog = () => {
               </tr>
             </thead>
             <tbody>
-                {logs?.filter((log) => log.result != null).map((log,index)=>( 
+                {logs?.map((log,index)=>( 
               <tr class=" border-b bg-gray-100 text-black">
               <td class="px-6 py-4">{index+1}</td>
                 <td class="px-6 py-4">{log.first_name} {log.last_name}</td>

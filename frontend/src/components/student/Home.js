@@ -94,7 +94,7 @@ const Home = () => {
                 <tr class=" border-b bg-gray-100 text-black">
                   <td class="px-6 py-4">{index + 1}</td>
                   <td class="px-6 py-4">
-                    {log.first_name} {log.last_name}
+                  {log.m_first_name} {log.m_last_name}
                   </td>
                   <td class="px-6 py-4">{log.operation}</td>
                   <td class="px-6 py-4">
