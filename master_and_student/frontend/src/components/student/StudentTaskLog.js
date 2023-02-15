@@ -59,7 +59,7 @@ const StudentTaskLog = () => {
               </tr>
             </thead>
             <tbody>
-              {logs?.map((log, index) => (
+              {logs?.filter((log) => log.result !== null).map((log, index) => (
                 <tr class=" border-b bg-gray-100 text-black">
                   <td class="px-6 py-4">{index + 1}</td>
                   <td class="px-6 py-4">
@@ -70,10 +70,10 @@ const StudentTaskLog = () => {
                     {log.input_one ? log.input_one : "-"}
                   </td>
                   <td class="px-6 py-4">
-                    {log.input_two ? log.input_two : "-"}
+                    {log.input_two  ? log.input_two : "-"}
                   </td>
                   <td class="px-6 py-4">{log.operation}</td>
-                  <td class="px-6 py-4">{log.result ? log.result : "-"}</td>
+                  <td class="px-6 py-4">{log.result | log.result=== 0 ? log.result : "-"}</td>
                 </tr>
               ))}
             </tbody>
